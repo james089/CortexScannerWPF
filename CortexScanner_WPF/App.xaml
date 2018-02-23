@@ -1,0 +1,9 @@
+﻿<Application x:Class="CortexScanner_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CortexScanner_WPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="/mUserControl_BSC_dll;component/Themes/CloudPoint.xaml"/>
+    </Application.Resources>
+</Application>

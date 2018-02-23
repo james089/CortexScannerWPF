@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CortexScanner_WPF", "CortexScanner_WPF\CortexScanner_WPF.csproj", "{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Debug|x64.ActiveCfg = Debug|x64
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Debug|x64.Build.0 = Debug|x64
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Release|x64.ActiveCfg = Release|x64
+		{7F49AC6D-B6C0-4C3E-9E5E-A324565A1309}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {289147C5-EBA5-4386-A21C-F435F112240C}
+	EndGlobalSection
+EndGlobal
