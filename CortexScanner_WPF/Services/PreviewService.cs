@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using CortexScanner_WPF.CortexDecoder;
 using Emgu.CV;
 using Emgu.CV.Structure;
-using Utilities_BSC_dll_x64;
 
 namespace CortexScanner_WPF.Services
 {
@@ -58,12 +57,12 @@ namespace CortexScanner_WPF.Services
             if (MainWindow.main.DecodeSwitch)
             {
                 imgOriginal.Draw(CortexCore.BondRec, new Bgr(0, 0, 255), 3);
-                ShapeNDraw.drawString(CortexCore.ResultString, imgOriginal,
+                Helpers.drawString(CortexCore.ResultString, imgOriginal,
                     new Point(CortexCore.BondRec.X, CortexCore.BondRec.Y - 20), 1, Color.Red);
                 MainWindow.main.lbl_codeResult.Content = CortexCore.ResultString;
             }
 
-            MainWindow.main.ibOriginal.Source = ImgConverter.ToBitmapSource(imgOriginal);
+            MainWindow.main.ibOriginal.Source = Helpers.ToBitmapSource(imgOriginal);
         }
 
         private static void previewRoutine_doWork(object sender, DoWorkEventArgs e)
@@ -77,7 +76,7 @@ namespace CortexScanner_WPF.Services
                     return;
                 }
 
-                imgOriginal = ConnectionService.mCamera.capture();
+                imgOriginal = ConnectionService.Capture();
 
                 if (MainWindow.main.DecodeSwitch)
                 {

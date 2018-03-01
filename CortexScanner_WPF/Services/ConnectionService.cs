@@ -1,27 +1,44 @@
-﻿using CameraToImage_dll_x64;
+﻿
+
+using Emgu.CV;
+using Emgu.CV.Structure;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 
 namespace CortexScanner_WPF.Services
 {
     public class ConnectionService
     {
-        public static CameraConnection mCamera = new CameraConnection();
+        public static Capture mCamera = null;
+        public static bool IsCameraConnected;
 
         public static bool ConnectCamera()
         {
             if (mCamera != null)                                           //if there is a camera, dispose and reconnect.
-                mCamera.disposeCam();
-
-            if (mCamera.connect(camType.WebCam))
             {
-                return true;
+                mCamera.Dispose();
+                IsCameraConnected = false;
             }
+
+            try
+            {
+                mCamera = new Capture();   // using Capture(0) / Capture(1) to switch between different webcams connected
+                IsCameraConnected = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                IsCameraConnected = false;
+            }
+            return IsCameraConnected;
+        }
+
+        public static Image<Bgr, byte> Capture()
+        {
+            if (IsCameraConnected)
+                return mCamera.QueryFrame();
             else
-                return false;
+                return null;
         }
     }
 }

@@ -60,9 +60,6 @@
     <ApplicationIcon>barcodeScanner.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CameraToImage_dll_x64">
-      <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\CameraToImage_dll_x64.dll</HintPath>
-    </Reference>
     <Reference Include="Emgu.CV">
       <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\Emgu.CV.dll</HintPath>
     </Reference>
@@ -72,16 +69,9 @@
     <Reference Include="Emgu.Util">
       <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\Emgu.Util.dll</HintPath>
     </Reference>
-    <Reference Include="FlyCap2CameraControl_v140, Version=2.11.3.121, Culture=neutral, PublicKeyToken=5abeeda345e59824, processorArchitecture=AMD64">
+    <Reference Include="mUserControl_BSC_dll, Version=3.1.1.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\FlyCap2CameraControl_v140.dll</HintPath>
-    </Reference>
-    <Reference Include="FlyCapture2Managed_v140, Version=2.11.3.121, Culture=neutral, PublicKeyToken=76c6583b4a4585f4, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\FlyCapture2Managed_v140.dll</HintPath>
-    </Reference>
-    <Reference Include="mUserControl_BSC_dll">
-      <HintPath>..\..\..\VSProjects\BSC_dll_pack_x64\BSC_dll_pack\bin\Release\mUserControl_BSC_dll.dll</HintPath>
+      <HintPath>ReferenceDll\mUserControl_BSC_dll.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -95,9 +85,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Utilities_BSC_dll_x64">
-      <HintPath>..\..\..\VSProjects\ImpressionFixtureCV\ImpressionFixtureCV_WPF\reference\Utilities_BSC_dll_x64.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -108,6 +95,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Services\ConnectionService.cs" />
+    <Compile Include="Services\Helpers.cs" />
     <Compile Include="Services\PreviewService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
